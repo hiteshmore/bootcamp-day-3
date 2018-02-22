@@ -1,0 +1,29 @@
+SELECT theatre_id
+FROM booking_order
+WHERE
+ movie_name LIKE '%pune%';
+
+SELECT number_of_tickets
+FROM event_app_event
+WHERE
+ movie_name LIKE '%pune%';
+
+SELECT
+ customer_id,
+ rental_id,
+ return_date
+FROM
+ rental
+WHERE
+ customer_id IN (1, 2)
+ORDER BY
+ return_date DESC;
+
+SELECT
+ ticket_amount
+FROM
+ booking_order
+WHERE
+ movie_name IN ( 'cinepolis', 'e-square','carnival','miraj')
+ORDER BY
+ movie_name DESC;
